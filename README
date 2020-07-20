@@ -1,0 +1,8 @@
+#Construction de l'image docker : 
+docker build -t pagesjaunes:v1 .
+
+#Lancement de container docker : 
+docker run -ti -v <Répertoire du projet>:/DATA pagesjaunes:v1
+
+#Dans le container :
+python3 /DATA/TestMe.py

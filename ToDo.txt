@@ -1,0 +1,7 @@
+*** Amélioration ***
+- Gestion des erreurs (try/catch, etc)
+- Mettre les drivers en paramètres des classes.
+- Paralléliser les requêtes.
+
+*** BUG ***
+- Certaines adresses sont mal récupérées.
