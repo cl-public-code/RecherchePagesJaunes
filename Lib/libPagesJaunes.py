@@ -23,6 +23,7 @@ class RecherchePagesJaunes:
 		self.totalPagesResultats = 0
 		self.listeUrlPagesResultats = []
 		self.societes = []
+		self.verboseLevel = verboseLevel
 		
 		#Driver du constructeur.
 		options = Options()
@@ -68,8 +69,8 @@ class RecherchePagesJaunes:
 		self.driver.close()
 
 		for UrlPageResultat in self.listeUrlPagesResultats:
-			for UrlAnnonce in PageResultatPagesJaunes(UrlPageResultat, 2).UrlsAnnonces:
-				self.societes.append(PageAnnonce(UrlAnnonce,2))		
+			for UrlAnnonce in PageResultatPagesJaunes(UrlPageResultat, self.verboseLevel).UrlsAnnonces:
+				self.societes.append(PageAnnonce(UrlAnnonce,self.verboseLevel))		
 
 		
 
